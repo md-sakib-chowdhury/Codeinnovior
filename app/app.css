@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
@@ -13,3 +14,61 @@ body {
     color-scheme: dark;
   }
 }
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.navsection {
+  width: 100%;
+  padding: 40px 16px;
+  text-align: center;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.tab .line {
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #f97316;
+  margin-top: 6px;
+  transition: width 0.3s ease;
+}
+
+.tab:hover .line,
+.tab.active .line {
+  width: 100%;
+}
+
+.tab.active {
+  color: #f97316;
+}
+
