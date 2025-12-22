@@ -17,6 +17,8 @@ export default function HeroWithNavbar() {
   const [scrollY, setScrollY] = useState(0);
   const [shiftRight, setShiftRight] = useState(false);
 
+
+
   // Scroll listener
   useEffect(() => {
     const handleScroll = () => {
@@ -255,7 +257,6 @@ export default function HeroWithNavbar() {
       </nav>
 
 
-
       {/* ================= HERO SECTION ================= */}
       <section
         className="min-h-screen pt-20 px-12 sm:px-20 lg:px-32 flex flex-col items-center relative overflow-visible mx-10 rounded-3xl mt-10"
@@ -338,13 +339,11 @@ export default function HeroWithNavbar() {
             }}
           >
             <img src={image} alt="frame" className="w-full rounded-4xl mt-2" />
+
+
           </div>
         </div>
       </section>
     </>
   );
 }
-
-
-
-

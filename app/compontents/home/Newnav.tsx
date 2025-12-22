@@ -76,9 +76,9 @@ export default function NavSection() {
       <section className="py-28 text-center px-6">
         <div className="max-w-[1800px] mx-auto">
 
-          <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full border shadow-sm">
-            <span className="w-3 h-3 rounded-full bg-green-500"></span>
-            <span className="text-green-600 font-medium">
+          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full border-2 border-white shadow-sm">
+            <span className="w-4 h-4 rounded-full bg-green-500"></span>
+            <span className="text-green-500 font-semibold bg-white">
               We Are Working With
             </span>
           </div>

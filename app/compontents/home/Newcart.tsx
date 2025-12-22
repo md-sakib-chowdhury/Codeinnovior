@@ -166,14 +166,26 @@ export default function Newcart() {
               <p>✱ ONLINE & IN-PERSON OPTIONS</p>
             </div>
 
-            <div className="flex gap-4 pt-6 flex-wrap">
-              <button className="bg-green-500 text-white px-7 py-4 rounded-xl font-semibold shadow-lg">
-                📱 Enroll Your Child Today
-              </button>
-              <button className="bg-white text-black px-7 py-4 rounded-xl font-semibold shadow-lg">
-                🎬 View Demo Class
-              </button>
-            </div>
+<div className="flex flex-col sm:flex-row justify-center gap-5 sm:gap-10 mt-8 sm:mt-12">
+  {/* Enroll Your Child Today */}
+  <button className="group flex items-center justify-center px-8 sm:px-14 py-4 sm:py-5 bg-green-500 text-white rounded-2xl text-base sm:text-lg md:text-xl shadow-lg transition-all duration-300 hover:bg-white hover:text-green-500">
+    <span className="flex items-center gap-4 transition-all duration-300 group-hover:flex-row-reverse">
+      <span className="text-xl bg-white">📱</span>
+      <span>Enroll Your Child Today</span>
+    </span>
+  </button>
+
+  {/* View Demo Class (Normal White → Hover Transparent) */}
+  <button className="group flex items-center justify-center px-8 sm:px-14 py-4 sm:py-5 bg-white text-purple-600 border-2 border-purple-600 rounded-2xl shadow-lg text-base sm:text-lg md:text-xl transition-all duration-300 hover:bg-transparent hover:text-purple-600 hover:border-purple-600">
+    <span className="flex items-center gap-4 transition-all duration-300 group-hover:flex-row-reverse">
+      <span className="text-xl  bg-white">🎬</span>
+      <span>View Demo Class</span>
+    </span>
+  </button>
+</div>
+
+
+            
           </div>
 
           {/* Right Image */}

@@ -62,7 +62,7 @@ export default function Courses() {
 
 
       <p className="text-gray-700 text-base sm:text-lg md:text-xl lg:text-2xl
-                    max-w-6xl mx-auto leading-relaxed">
+                    max-w-8xl mx-auto leading-relaxed">
         Level Up Your Skills With Our Expertly Crafted, Hands-On Training Programs.
         Whether You're Just Starting Out Or Upskilling For The Next Big Opportunity —
         We've Got The Course For You.
@@ -206,6 +206,82 @@ export default function Courses() {
 </div>
 
   </div>
+  <div className="flex justify-center mt-14">
+  <button
+    className="
+      group relative overflow-hidden
+      flex items-center justify-center
+      px-10 sm:px-16 py-4 sm:py-5
+      rounded-xl text-lg sm:text-xl font-semibold
+      text-white shadow-xl
+      border-2 border-transparent
+      transition-all duration-300
+    "
+  >
+    {/* GRADIENT BASE */}
+    <span
+      className="
+        absolute inset-0
+        bg-gradient-to-r from-purple-600 to-purple-700
+        transition-opacity duration-300
+        group-hover:opacity-0
+        rounded-xl
+      "
+    ></span>
+
+    {/* WHITE HOVER OVERLAY */}
+    <span
+      className="
+        absolute inset-0
+        bg-white
+        opacity-0
+        transition-opacity duration-300
+        group-hover:opacity-100
+        rounded-xl
+        border-2 border-purple-600
+      "
+    ></span>
+
+    {/* LEFT ARROW */}
+    <span
+      className="
+        absolute left-6 z-10
+        transition-all duration-300
+        group-hover:opacity-0
+        group-hover:-translate-x-3
+        text-white group-hover:text-purple-600
+      "
+    >
+      →
+    </span>
+
+    {/* TEXT */}
+    <span
+      className="
+        relative z-10
+        transition-colors duration-300
+        group-hover:text-purple-600
+      "
+    >
+      Browse All
+    </span>
+
+    {/* RIGHT ARROW */}
+    <span
+      className="
+        absolute right-6 z-10
+        opacity-0
+        transition-all duration-300
+        group-hover:opacity-100
+        group-hover:translate-x-0
+        text-purple-600
+      "
+    >
+      →
+    </span>
+  </button>
+</div>
+
 </section>
 
   );
