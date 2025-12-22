@@ -19,119 +19,141 @@ import partner15 from "./CashApp.png";
 export default function NavSection() {
   const [activeTab, setActiveTab] = useState("partners");
 
+  const partners = [
+    partner1, partner2, partner3, partner4, partner5, partner6,
+    partner7, partner8, partner9, partner10, partner11,
+    partner12, partner13, partner14, partner15,
+  ];
+
+  const csrPartners = [
+    partner2, partner4, partner6, partner8, partner10, partner12,
+    partner13, partner14, partner15,
+  ];
+
+  const i2iPartners = [
+    partner1, partner3, partner5, partner7, partner9, partner11,
+    partner12, partner13, partner14,
+  ];
+
+  // ===== 3 ROW GRID =====
+  const renderThreeRows = (images) => (
+    <div className="space-y-20">
+
+      {/* Row 1 – 6 images (widest) */}
+      <div className="mx-auto max-w-[1700px]
+        grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6
+        gap-x-16 lg:gap-x-24 gap-y-12 place-items-center">
+        {images.slice(0, 6).map((logo, i) => (
+          <img key={i} src={logo} className="h-12 sm:h-14 lg:h-16 object-contain" />
+        ))}
+      </div>
+
+      {/* Row 2 – 5 images */}
+      <div className="mx-auto max-w-[1400px]
+        grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5
+        gap-x-16 lg:gap-x-24 gap-y-12 place-items-center">
+        {images.slice(6, 11).map((logo, i) => (
+          <img key={i} src={logo} className="h-12 sm:h-14 lg:h-16 object-contain" />
+        ))}
+      </div>
+
+      {/* Row 3 – 4 images (narrowest) */}
+      <div className="mx-auto max-w-[1100px]
+        grid grid-cols-2 sm:grid-cols-4
+        gap-x-16 lg:gap-x-24 gap-y-12 place-items-center">
+        {images.slice(11, 15).map((logo, i) => (
+          <img key={i} src={logo} className="h-12 sm:h-14 lg:h-16 object-contain" />
+        ))}
+      </div>
+
+    </div>
+  );
+
   return (
-    <div className="w-full mt-20">
+    <div className="w-full bg-white">
 
-      {/* ================= NAVIGATION ================= */}
-      <div className="w-full py-10 flex justify-center">
-        <ul className="flex items-center gap-20">
+      {/* ================= HERO ================= */}
+      <section className="py-28 text-center px-6">
+        <div className="max-w-[1800px] mx-auto">
 
-          {/* Our Partners */}
-          <li
-            onClick={() => setActiveTab("partners")}
-            className="cursor-pointer"
-          >
-            <span
-              className={`
-                text-3xl font-medium transition-all
-                ${activeTab === "partners"
-                  ? "text-orange-500 border-b-4 border-orange-500 pb-2"
-                  : "text-gray-600 hover:text-orange-500"}
-              `}
-            >
-              Our Partners
+          <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full border shadow-sm">
+            <span className="w-3 h-3 rounded-full bg-green-500"></span>
+            <span className="text-green-600 font-medium">
+              We Are Working With
             </span>
-          </li>
+          </div>
 
-          {/* CSR */}
-          <li
-            onClick={() => setActiveTab("csr")}
-            className="cursor-pointer"
-          >
-            <span
-              className={`
-                text-3xl font-medium transition-all
-                ${activeTab === "csr"
-                  ? "text-orange-500 border-b-4 border-orange-500 pb-2"
-                  : "text-gray-600 hover:text-orange-500"}
-              `}
+          <h1 className="mt-10 font-extrabold text-black
+            text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+            Building a Stronger Future Through Collaboration
+          </h1>
+
+          <p className="mt-10 text-gray-700 max-w-[1800px] mx-auto
+            text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
+            We Partner With Tech Companies, Educational Institutions, Mentors,
+            And Non-Profits To Create A Learning Ecosystem That Bridges Education
+            And Industry.
+          </p>
+
+          <p className="mt-4 text-gray-700 max-w-[1800px] mx-auto
+            text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
+            These Collaborations Help Us Deliver Real-World Learning,
+            Placement Opportunities, And Social Impact — Together.
+          </p>
+
+        </div>
+      </section>
+
+      {/* ================= TABS ================= */}
+      <div className="flex justify-center">
+        <div className="flex flex-wrap justify-center gap-8 sm:gap-16 lg:gap-32
+          text-xl sm:text-2xl lg:text-3xl font-medium">
+          {[
+            { key: "partners", label: "Our Partners" },
+            { key: "csr", label: "Corporate Social Responsibility" },
+            { key: "i2i", label: "i2i – Intern to Industry" },
+          ].map(tab => (
+            <button
+              key={tab.key}
+              onClick={() => setActiveTab(tab.key)}
+              className={`pb-3 transition
+                ${activeTab === tab.key
+                  ? "text-orange-500 border-b-4 border-orange-500"
+                  : "text-gray-500 hover:text-orange-500"
+                }`}
             >
-              Corporate Social Responsibilities
-            </span>
-          </li>
-
-          {/* I2I */}
-          <li
-            onClick={() => setActiveTab("i2i")}
-            className="cursor-pointer"
-          >
-            <span
-              className={`
-                text-3xl font-medium transition-all
-                ${activeTab === "i2i"
-                  ? "text-orange-500 border-b-4 border-orange-500 pb-2"
-                  : "text-gray-600 hover:text-orange-500"}
-              `}
-            >
-              I2I Program
-            </span>
-          </li>
-
-        </ul>
+              {tab.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* ================= CONTENT ================= */}
+      <section className="py-28">
+        <div className="px-6">
 
-      {/* ===== OUR PARTNERS ===== */}
-      {activeTab === "partners" && (
-        <section className="w-full bg-white py-16">
-          <div className="w-full flex flex-col items-center space-y-14">
+          {activeTab === "partners" && renderThreeRows(partners)}
 
-            {/* Row 1 */}
-            <div className="w-full max-w-7xl mx-auto">
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-x-12 gap-y-10">
-                {[partner1, partner2, partner3, partner4, partner5, partner6].map((logo, i) => (
-                  <img key={i} src={logo} className="logo-style" />
-                ))}
-              </div>
-            </div>
+          {activeTab === "csr" && (
+            <>
+              <h2 className="mb-16 text-center text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-700">
+                Our CSR Partners
+              </h2>
+              {renderThreeRows(csrPartners)}
+            </>
+          )}
 
-            {/* Row 2 */}
-            <div className="w-full max-w-6xl mx-auto">
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-x-14 gap-y-10">
-                {[partner7, partner8, partner9, partner10, partner11].map((logo, i) => (
-                  <img key={i} src={logo} className="logo-style" />
-                ))}
-              </div>
-            </div>
+          {activeTab === "i2i" && (
+            <>
+              <h2 className="mb-16 text-center text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-700">
+                Industry Partners (I2I / ITI Program)
+              </h2>
+              {renderThreeRows(i2iPartners)}
+            </>
+          )}
 
-            {/* Row 3 */}
-            <div className="w-full max-w-5xl mx-auto">
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-16 gap-y-10">
-                {[partner12, partner13, partner14, partner15].map((logo, i) => (
-                  <img key={i} src={logo} className="logo-style" />
-                ))}
-              </div>
-            </div>
-
-          </div>
-        </section>
-      )}
-
-      {/* ===== CSR PLACEHOLDER ===== */}
-      {activeTab === "csr" && (
-        <div className="py-32 text-center text-2xl text-gray-500">
-          CSR Content Here
         </div>
-      )}
-
-      {/* ===== I2I PLACEHOLDER ===== */}
-      {activeTab === "i2i" && (
-        <div className="py-32 text-center text-2xl text-gray-500">
-          I2I Program Content Here
-        </div>
-      )}
-
+      </section>
     </div>
   );
 }

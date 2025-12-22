@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import logo from "./imges/codeinnovior logo transparent 1.png";
@@ -37,7 +38,7 @@ export default function HeroWithNavbar() {
     <>
       {/* ================= NAVBAR ================= */}
       <nav
-        className={`fixed 
+        className={`fixed relative
         top-4 sm:top-8 lg:top-16 
         left-1/2 -translate-x-1/2 
         w-[92vw] sm:w-[88vw] lg:w-[86vw]
@@ -67,10 +68,10 @@ export default function HeroWithNavbar() {
             className="
             hidden lg:flex
             items-center
-            ml-6
-            gap-14 lg:gap-20
+            ml-35
+            gap-15 lg:gap-20
             flex-nowrap whitespace-nowrap
-            text-[15px] lg:text-[20px]
+            text-[15px] lg:text-[25px]
             font-medium text-gray-800
             "
           >
@@ -82,13 +83,13 @@ export default function HeroWithNavbar() {
           </div>
 
           {/* Desktop Buttons - Kids Program & Contact */}
-          <div className="hidden lg:flex items-center absolute right-4  gap-4 ">
+          <div className="hidden lg:flex items-center absolute right-10 gap-4 ">
             {/* Kids Program Button */}
-              <button
-          className="
+            <button
+              className="
             group
             flex items-center
-            px-10 py-4
+            px-12 py-4
             rounded-xl
             font-bold
             text-white
@@ -99,33 +100,33 @@ export default function HeroWithNavbar() {
             hover:text-[#e82074]
             min-w-[260px]
           "
-        >
-          <span className="flex items-center gap-3 transition-all duration-300 group-hover:flex-row-reverse">
-           <div className="relative w-12 h-8 flex items-center justify-center">
-  {/* Base icon */}
-  <img 
-    src={vector2} 
-    className="absolute w-full h-full transition-all duration-300 group-hover:invert group-hover:sepia group-hover:saturate-200 group-hover:hue-rotate-90" 
-    alt="icon"
-  />
-  {/* Top icon */}
-  <img 
-    src={vector1} 
-    className="absolute w-6 h-6 transition-all duration-300 group-hover:invert group-hover:sepia group-hover:saturate-200 group-hover:hue-rotate-90" 
-    alt="icon"
-  />
-</div>
+            >
+              <span className="flex items-center gap-3 transition-all duration-300 group-hover:flex-row-reverse">
+                <div className="relative w-12 h-8 flex items-center justify-center">
+                  {/* Base icon */}
+                  <img
+                    src={vector2}
+                    className="absolute w-full h-full transition-all duration-300 group-hover:invert group-hover:sepia group-hover:saturate-200 group-hover:hue-rotate-90"
+                    alt="icon"
+                  />
+                  {/* Top icon */}
+                  <img
+                    src={vector1}
+                    className="absolute w-6 h-6 transition-all duration-300 group-hover:invert group-hover:sepia group-hover:saturate-200 group-hover:hue-rotate-90"
+                    alt="icon"
+                  />
+                </div>
 
-            <span>Kids Program</span>
-          </span>
-        </button>
+                <span>Kids Program</span>
+              </span>
+            </button>
 
-        {/* Contact Button */}
-        <button
-          className="
+            {/* Contact Button */}
+            <button
+              className="
             group
             flex items-center
-            px-10 py-5
+            px-14 py-6
             rounded-xl
             font-bold
             text-white
@@ -134,21 +135,21 @@ export default function HeroWithNavbar() {
             bg-[#9747ff]
             hover:bg-white
             hover:text-[#9747ff]
-            min-w-[140px]
+            min-w-[160px]
           "
-        >
-          <span className="flex items-center gap-3 transition-all duration-300 group-hover:flex-row-reverse">
-            <div className="relative w-6 h-6 flex items-center justify-center">
-              <img 
-                src={vector3} 
-                className="w-6 h-6 transition-all duration-300 group-hover:invert group-hover:sepia group-hover:saturate-200 group-hover:hue-rotate-90" 
-                alt="icon"
-              />
-            </div>
-            <span>Contact</span>
-          </span>
-        </button>
-      
+            >
+              <span className="flex items-center gap-3 transition-all duration-300 group-hover:flex-row-reverse">
+                <div className="relative w-6 h-6 flex items-center justify-center">
+                  <img
+                    src={vector3}
+                    className="w-6 h-6 transition-all duration-300 group-hover:invert group-hover:sepia group-hover:saturate-200 group-hover:hue-rotate-90"
+                    alt="icon"
+                  />
+                </div>
+                <span>Contact</span>
+              </span>
+            </button>
+
           </div>
 
           {/* Mobile Toggle */}
@@ -161,9 +162,8 @@ export default function HeroWithNavbar() {
 
         {/* Mobile Dropdown Menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            menuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-          }`}
+          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${menuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+            }`}
         >
           <div className="px-4 pt-2 pb-4 space-y-3">
             {/* Mobile Menu Links */}
@@ -254,7 +254,7 @@ export default function HeroWithNavbar() {
         </div>
       </nav>
 
- 
+
 
       {/* ================= HERO SECTION ================= */}
       <section
@@ -344,4 +344,7 @@ export default function HeroWithNavbar() {
     </>
   );
 }
- 
+
+
+
+

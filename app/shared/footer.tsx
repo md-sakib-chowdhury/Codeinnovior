@@ -6,19 +6,20 @@ import vector2 from "../shared/vector 2.png";
 import vector3 from "../shared/vector3.png";
 import frame12 from "../shared/Frame12.png"; // Frame12 import
 import frame22 from "../shared/Frame 22.png";
+import frame23 from"../shared/Frame 23.png";
 // Frame22 import
 
 export default function Footer() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <footer className="w-full h-screen relative flex justify-center items-start mt-25">
+    <footer className="w-full h-screen relative flex justify-center items-start mt-45">
       
       {/* Full-screen logo as background */}
       <img 
         src={logo} 
         alt="Footer Background" 
-        className="w-[1800px] h-[700px] object-cover rounded-4xl"
+        className="w-[2000px] h-[1000px] object-cover rounded-4xl"
       />
 
       {/* Overlay content */}
@@ -75,7 +76,7 @@ export default function Footer() {
         </div>
 
         {/* Frame12 Image below buttons */}
-        <div className="mt-4 sm:mt-8 md:mt-10 w-full flex justify-start max-w-[600px]">
+        <div className="mt-20 sm:mt-8 md:mt-10 w-full flex justify-start max-w-[800px]">
           <img 
             src={frame12} 
             alt="Frame 12" 
@@ -83,21 +84,30 @@ export default function Footer() {
           />
         </div>
 
-        {/* Payment Channels text below Frame12, fully left aligned */}
-        <div className="mt-4 w-full text-left">
-          <h6 className="text-black text-lg mt-10 mx-50 sm:text-small md:text-xl lg:text-xl">
-            Payment Channels
-          </h6>
-        </div>
+      {/* Payment Channels text */}
+<div className="w-full text-left">
+  <h6 className="text-black text-lg mt-24  mx-48 md:text-xl lg:text-xl">
+    Payment Channels
+  </h6>
+</div>
 
-        {/* Frame22 Image below Payment Channels, aligned left */}
-        <div className="mt-4 w-full flex justify-start max-w-[1500px]">
-          <img 
-            src={frame22} 
-            alt="Frame 22" 
-            className="w-full object-contain"
-          />
-        </div>
+{/* Frame22 Image */}
+<div className="mt-12 w-full flex justify-start max-w-[1800px]">
+  <img
+    src={frame22}
+    alt="Frame 22"
+    className="w-full object-contain"
+  />
+</div>
+
+<div className="mt-12 w-full flex justify-start max-w-[1800px]">
+  <img
+    src={frame23}
+    alt="Frame 22"
+    className="w-full object-contain"
+  />
+</div>
+
 
       </div>
 
