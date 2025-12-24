@@ -1,5 +1,5 @@
 import kidsimg from "./kidsimg.png";
-import rImg from "./r.png";
+import rImg from "./R.png";
 
 import f from "./f.png";
 import f2 from "./f2.png";
@@ -35,30 +35,30 @@ export default function Newcart() {
           </p>
 
           {/* ================= FEATURE CARDS ================= */}
-       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
                 gap-8 lg:gap-12 
                 px-4 mt-10 
                 max-w-[1900px] mx-auto">
-  {[
-    {
-      title: "Tailored Learning Experiences",
-      text: "We Offer Customized Learning Experiences Designed To Empower Individuals To Launch Their Careers With Confidence.",
-      img: f,
-    },
-    {
-      title: "Comprehensive Course Offerings",
-      text: "We Offers A Variety Of Courses In Web Development, Cyber Security, UI/UX Design, & Graphic Design With Industry Level Training Etc.",
-      img: f2,
-    },
-    {
-      title: "Hands-On Projects & Expert Mentorship",
-      text: "Students Enjoy Hands-On Projects, Interactive Workshops, & Guidance From Industry Professionals To Build Practical Skills And Real-World Expertise.",
-      img: f3,
-    },
-  ].map((item, i) => (
-    <div
-      key={i}
-      className="
+            {[
+              {
+                title: "Tailored Learning Experiences",
+                text: "We Offer Customized Learning Experiences Designed To Empower Individuals To Launch Their Careers With Confidence.",
+                img: f,
+              },
+              {
+                title: "Comprehensive Course Offerings",
+                text: "We Offers A Variety Of Courses In Web Development, Cyber Security, UI/UX Design, & Graphic Design With Industry Level Training Etc.",
+                img: f2,
+              },
+              {
+                title: "Hands-On Projects & Expert Mentorship",
+                text: "Students Enjoy Hands-On Projects, Interactive Workshops, & Guidance From Industry Professionals To Build Practical Skills And Real-World Expertise.",
+                img: f3,
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="
         bg-white/80 backdrop-blur-sm
         rounded-3xl
         p-10 sm:p-12 lg:p-14
@@ -67,32 +67,32 @@ export default function Newcart() {
         min-h-[420px] sm:min-h-[460px] lg:min-h-[520px]
         flex flex-col
       "
-    >
-      {/* ICON */}
-      <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 
+              >
+                {/* ICON */}
+                <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 
                       mx-auto mb-8 rounded-full 
                       bg-gradient-to-br from-orange-100 to-pink-100 
                       flex items-center justify-center">
-        <img
-          src={item.img}
-          alt={item.title}
-          className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 object-contain"
-        />
-      </div>
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 object-contain"
+                  />
+                </div>
 
-      {/* TITLE */}
-      <h3 className="text-2xl sm:text-3xl lg:text-4xl 
+                {/* TITLE */}
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl 
                      font-bold text-black mb-5 leading-tight">
-        {item.title}
-      </h3>
+                  {item.title}
+                </h3>
 
-      {/* TEXT */}
-      <p className="text-gray-600 text-base sm:text-lg lg:text-xl leading-relaxed">
-        {item.text}
-      </p>
-    </div>
-  ))}
-</div>
+                {/* TEXT */}
+                <p className="text-gray-600 text-base sm:text-lg lg:text-xl leading-relaxed">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
 
         </div>
       </div>
@@ -135,7 +135,7 @@ export default function Newcart() {
       </div>
 
       {/* ================= KIDS PROGRAM ================= */}
-            <div className="w-full flex justify-center py-20 bg-white">
+      <div className="w-full flex justify-center py-20 bg-white">
         <div className="relative w-[190%] max-w-[1600px] rounded-[80px] overflow-hidden px-12 py-16 md:px-20 md:py-24 lg:px-24 lg:py-28 flex flex-col lg:flex-row justify-between min-h-[800px]">
 
           {/* Background */}
@@ -166,26 +166,26 @@ export default function Newcart() {
               <p>✱ ONLINE & IN-PERSON OPTIONS</p>
             </div>
 
-<div className="flex flex-col sm:flex-row justify-center gap-5 sm:gap-10 mt-8 sm:mt-12">
-  {/* Enroll Your Child Today */}
-  <button className="group flex items-center justify-center px-8 sm:px-14 py-4 sm:py-5 bg-green-500 text-white rounded-2xl text-base sm:text-lg md:text-xl shadow-lg transition-all duration-300 hover:bg-white hover:text-green-500">
-    <span className="flex items-center gap-4 transition-all duration-300 group-hover:flex-row-reverse">
-      <span className="text-xl bg-white">📱</span>
-      <span>Enroll Your Child Today</span>
-    </span>
-  </button>
+            <div className="flex flex-col sm:flex-row justify-center gap-5 sm:gap-10 mt-8 sm:mt-12">
+              {/* Enroll Your Child Today */}
+              <button className="group flex items-center justify-center px-8 sm:px-14 py-4 sm:py-5 bg-green-500 text-white rounded-2xl text-base sm:text-lg md:text-xl shadow-lg transition-all duration-300 hover:bg-white hover:text-green-500">
+                <span className="flex items-center gap-4 transition-all duration-300 group-hover:flex-row-reverse">
+                  <span className="text-xl bg-white">📱</span>
+                  <span>Enroll Your Child Today</span>
+                </span>
+              </button>
 
-  {/* View Demo Class (Normal White → Hover Transparent) */}
-  <button className="group flex items-center justify-center px-8 sm:px-14 py-4 sm:py-5 bg-white text-purple-600 border-2 border-purple-600 rounded-2xl shadow-lg text-base sm:text-lg md:text-xl transition-all duration-300 hover:bg-transparent hover:text-purple-600 hover:border-purple-600">
-    <span className="flex items-center gap-4 transition-all duration-300 group-hover:flex-row-reverse">
-      <span className="text-xl  bg-white">🎬</span>
-      <span>View Demo Class</span>
-    </span>
-  </button>
-</div>
+              {/* View Demo Class (Normal White → Hover Transparent) */}
+              <button className="group flex items-center justify-center px-8 sm:px-14 py-4 sm:py-5 bg-white text-purple-600 border-2 border-purple-600 rounded-2xl shadow-lg text-base sm:text-lg md:text-xl transition-all duration-300 hover:bg-transparent hover:text-purple-600 hover:border-purple-600">
+                <span className="flex items-center gap-4 transition-all duration-300 group-hover:flex-row-reverse">
+                  <span className="text-xl  bg-white">🎬</span>
+                  <span>View Demo Class</span>
+                </span>
+              </button>
+            </div>
 
 
-            
+
           </div>
 
           {/* Right Image */}
